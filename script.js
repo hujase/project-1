@@ -1,5 +1,30 @@
     'use strict';
 
+    let startBtn = document.getElementById("start"),
+        budgetValue = document.getElementsByClassName('bugget-value')[0],
+        dayBudgetValue = document.getElementsByClassName('daybudget-value')[0],
+        levelValue = document.getElementsByClassName('level-value')[0],
+        expensesValue = document.getElementsByClassName('expenses-value')[0],
+        optinalExpensesValue = document.getElementsByClassName('optinalexpenses-value')[0],
+        incomeValue = document.getElementsByClassName('income-value')[0],
+        monthSavingsValue = document.getElementsByClassName('monthsaving-value')[0],
+        yearSavingsValue = document.getElementsByClassName('yearsavings-value')[0],
+
+
+        expensesItem = document.getElementsByClassName('expenses-item'),
+        expensesBtn = document.getElementsByTagName('button')[0],
+        optinalExpensesBtn = document.getElementsByTagName('button1')[1],
+        countBtn = document.getElementsByTagName('button')[2],
+        optinalExpensesItem = document.querySelectorAll('.optionalexpenses-item'),
+        incomeItem = document.querySelector('.choose-income'),
+        checkSaving = document.getElementById('#savings'),
+        sumValue = document.querySelector('.cgoose-sum'),
+        percentValue = document.querySelector('.choose-percent'),
+        yearValue = document.querySelector('.year-value'),
+        monthValue = document.querySelector('.month-value'),
+        dayValue = document.querySelector('.day-value');
+
+
 
     let money, time;
 
@@ -60,7 +85,7 @@
     }
     detectLevel();
 
-    function checkSaving() {
+    function checkSavings() {
         if (appData.savings == true) {
             let save = +prompt('Какова сумма накоплений?');
             percent = +prompt('Под какой процент?');
@@ -71,7 +96,7 @@
 
         }
     }
-    checkSaving();
+    checkSavings();
 
     function chooseOptExpenses() {
         for (let i = 1; i <= 3; i++) {
